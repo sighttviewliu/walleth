@@ -11,13 +11,13 @@ apply plugin: 'org.jetbrains.kotlin.android.extensions'
 apply plugin: "com.jaredsburrows.license"
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
 
     defaultConfig {
         applicationId "org.walleth"
 
         minSdkVersion 15
-        targetSdkVersion 27
+        targetSdkVersion 28
 
         versionCode 424
         versionName "0.42.4"

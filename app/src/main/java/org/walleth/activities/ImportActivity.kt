@@ -142,7 +142,7 @@ class ImportActivity : AppCompatActivity(), KodeinAware {
                         .setTitle(getString(R.string.dialog_title_success))
 
                 appDatabase.addressBook.getByAddressAsync(importKey) { oldEntry ->
-                    val accountName = if (account_name.text.isBlank()) {
+                    val accountName = if (account_name.text?.isNotBlank() != true) {
                         oldEntry?.name ?: getString(R.string.imported_key_default_entry_name)
                     } else {
                         account_name.text

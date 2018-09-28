@@ -70,7 +70,7 @@ class CreateAccountActivity : AppCompatActivity(), KodeinAware {
 
             if (!Address(hex).isValid()) {
                 alert(title = alert_problem_title, message = address_not_valid)
-            } else if (nameInput.text.isBlank()) {
+            } else if (nameInput.text?.isNotBlank() != true) {
                 alert(title = alert_problem_title, message = please_enter_name)
             } else {
                 lastCreatedAddress?.let {
